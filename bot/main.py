@@ -76,4 +76,8 @@ async def salary_calculation(message: types.Message):
 
 
 if __name__ == "__main__":
-    executor.start_polling(dp, skip_updates=True)
+    while True:
+        try:
+            executor.start_polling(dp, skip_updates=True)
+        except:
+            pass
